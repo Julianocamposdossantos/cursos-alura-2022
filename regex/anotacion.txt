@@ -1,0 +1,18 @@
+temos o seguinte código:
+15.123.321/8883-22;
+=> A primeira parte possui dois números e o "ponto", portanto: \d{2}\.
+=> A segunda e terceira parte possuem três números, separado por "ponto", portanto: \d{3}\.\d{3}
+=> Após disso, há uma barra que deve ser escapada: \/	
+=> Após à barra, vem quatro números e os dois dígitos verificadores: \d{4}\-\d{2}
+=> Uma resposta correta é: \d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}
+
+para verificarmos se o item existe ou não usa-se (?)
+ex: 121.256.201-00
+
+\d{3}.?\d{3}.?\d{3}[-.]?\d{2}
+
+
+o .? vai verificar se tem . ou não.
+
+usa-se [] para criar as nossas próprias caracters no caso [-.]? <=== verifica se tem um . ou um -
+
